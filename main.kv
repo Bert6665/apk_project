@@ -1,0 +1,29 @@
+#:kivy 2.1.0
+
+<Container>
+    rows: 3
+    padding: 50
+
+    text_input: text_input
+    label_widget: label
+
+    TextInput:
+        id: text_input
+        size_hint: 1, 0.4
+        # size_hint_y: 0.4
+        multiline: False
+        font_size: 40
+
+    Label:
+        id: label
+        text: 'SomeText'
+        font_size: 40
+    FloatLayout:    
+        Button:
+            size_hint: 0.5, 0.4
+            pos_hint: {'center_x': 0.5, 'y': 0.1}
+            text: 'Hello'
+            font_size: 40
+
+            on_release:
+                root.change_text()
